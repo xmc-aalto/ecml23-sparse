@@ -1,0 +1,9 @@
+{
+ "defaults": {"repeat": 1, "dropout": 0.1, "learning_rate": 1e-3, "rewire_interval": 1000, "rewire_fraction": 0.1,
+ "features":  "cascade", "dataset": "Amazon-3M", "loss_fn": "squared_hinge"},
+ "tasks": [
+  {"connectivity": 0,  "intermediate": 0,     "architecture": "dense"},
+  {"connectivity": 32, "intermediate":  65536, "architecture": "dense-stratified"},
+  {"connectivity": 32, "intermediate": 131072, "architecture": "dense-stratified"}
+ ]
+}

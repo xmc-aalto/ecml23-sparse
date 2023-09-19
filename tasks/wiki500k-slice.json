@@ -1,0 +1,29 @@
+{
+ "defaults": {"repeat": 1, "dropout": 0.1, "learning_rate": 1e-3, "rewire_interval": 1000, "rewire_fraction": 0.1,
+ "features":  "slice", "dataset":  "Wikipedia-500K", "loss_fn": "squared_hinge"},
+ "tasks": [
+  {"connectivity": 32, "intermediate": 16384, "architecture": "dense-stratified"},
+  {"connectivity": 32, "intermediate": 32768, "architecture": "dense-stratified",   "repeat": 5},
+  {"connectivity": 32, "intermediate": 65536, "architecture": "dense-stratified"},
+  {"connectivity": 32, "intermediate": 100000, "architecture": "dense-stratified"},
+
+  {"connectivity": 64, "intermediate": 16384, "architecture": "dense-stratified"},
+  {"connectivity": 64, "intermediate": 32768, "architecture": "dense-stratified"},
+  {"connectivity": 64, "intermediate": 65536, "architecture": "dense-stratified"},
+  {"connectivity": 64, "intermediate": 100000, "architecture": "dense-stratified"},
+
+  {"connectivity": 0,  "intermediate": 0,     "architecture": "dense",              "repeat": 5},
+  {"connectivity": 32, "intermediate": 32768, "architecture": "dense-sparse"},
+  {"connectivity": 32, "intermediate": 0,     "architecture": "stratified",         "repeat": 5},
+  {"connectivity": 32, "intermediate": 0,     "architecture": "sparse"},
+
+  {"connectivity": 0,  "intermediate": 64,    "architecture": "bottleneck",         "repeat": 5},
+
+  {"connectivity": 32, "intermediate": 16384, "architecture": "dense-stratified", "dropout": 0.0},
+  {"connectivity": 32, "intermediate": 16384, "architecture": "dense-stratified", "dropout": 0.2},
+  {"connectivity": 32, "intermediate": 16384, "architecture": "dense-stratified", "rewire_fraction": 0.3},
+  {"connectivity": 32, "intermediate": 16384, "architecture": "dense-stratified", "rewire_interval": 10000},
+  {"connectivity": 32, "intermediate": 16384, "architecture": "dense-stratified", "rewire_interval": 100},
+  {"connectivity": 32, "intermediate": 16384, "architecture": "dense-stratified", "loss_fn": "bce"}
+ ]
+}
