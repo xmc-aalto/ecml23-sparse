@@ -95,7 +95,6 @@ layer to be used with large output spaces.
 | FFI        |             32 | 65k            |   68.0821   |   62.0092   |    58.0273  |  48.0666   |  44.1058   |  41.4422   | 4.47     |      100 |          1900.88 |
 | FFI        |             32 | 131k           |   71.1833   |   64.8428   |    60.6424  |  49.1193   |  44.9967   |  42.3026   | 5.01     |      100 |          1901.56 |
 | FFI        |             64 | 131k           |   78.1226   |   71.9641   |    67.6447  |  50.3997   |  46.7399   |  44.2132   | 8.67     |      100 |          2336.67 |
-                                8.67326       100           2336.67         4        1
 
 ## Building the library
 First, create a conda environment as provided by `environment.yml`, e.g. through
